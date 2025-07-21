@@ -1,0 +1,31 @@
+name: simple
+
+topology:
+  kinds:
+    linux:
+      image: apline-host:latest
+  nodes:
+    spine1:
+      kind: arista_ceos
+      image: ghcr.io/afroash/ceos:4.31.3m 
+
+    leaf1a:
+      kind: arista_ceos    
+      image: ghcr.io/afroash/ceos:4.31.3m 
+
+    leaf1b:
+      kind: arista_ceos
+      image: ghcr.io/afroash/ceos:4.31.3m 
+
+    client1:
+      kind: linux
+      env:
+        TMODE: lacp
+
+  links:
+    - endpoints: ["spine1:eth1", "leaf1a:eth1"]
+    - endpoints: ["spine1:eth2", "leaf1b:eth1"]
+    - endpoints: ["leaf1a:eth2", "leaf1b:eth2"]
+    - endpoints: ["leaf1a:eth3", "leaf1b:eth3"]
+    - endpoints: ["leaf1a:eth4", "client1:eth1"]
+    - endpoints: ["leaf1b:eth4", "client1:eth2"]

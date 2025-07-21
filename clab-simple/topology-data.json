@@ -1,0 +1,232 @@
+{
+  "name": "simple",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-02defec70648",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJx8TY5oG+nIfzSgb9KQh+rqY8ZjoL4VrgEHAVn7evTE"],
+  "nodes": {
+    "client1": {
+      "index": "0",
+      "shortname": "client1",
+      "longname": "clab-simple-client1",
+      "fqdn": "client1.simple.io",
+      "group": "",
+      "labdir": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/clab-simple/client1",
+      "kind": "linux",
+      "image": "apline-host:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-02defec70648",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/clab-simple/client1",
+        "clab-node-longname": "clab-simple-client1",
+        "clab-node-name": "client1",
+        "clab-node-type": "",
+        "clab-owner": "ashley",
+        "clab-topo-file": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/simple.clab.yml",
+        "containerlab": "simple"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf1a": {
+      "index": "1",
+      "shortname": "leaf1a",
+      "longname": "clab-simple-leaf1a",
+      "fqdn": "leaf1a.simple.io",
+      "group": "",
+      "labdir": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/clab-simple/leaf1a",
+      "kind": "arista_ceos",
+      "image": "ghcr.io/afroash/ceos:4.31.3m",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:2d:82:4f",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-02defec70648",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/clab-simple/leaf1a",
+        "clab-node-longname": "clab-simple-leaf1a",
+        "clab-node-name": "leaf1a",
+        "clab-node-type": "",
+        "clab-owner": "ashley",
+        "clab-topo-file": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/simple.clab.yml",
+        "containerlab": "simple"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf1b": {
+      "index": "2",
+      "shortname": "leaf1b",
+      "longname": "clab-simple-leaf1b",
+      "fqdn": "leaf1b.simple.io",
+      "group": "",
+      "labdir": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/clab-simple/leaf1b",
+      "kind": "arista_ceos",
+      "image": "ghcr.io/afroash/ceos:4.31.3m",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:42:52:93",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-02defec70648",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/clab-simple/leaf1b",
+        "clab-node-longname": "clab-simple-leaf1b",
+        "clab-node-name": "leaf1b",
+        "clab-node-type": "",
+        "clab-owner": "ashley",
+        "clab-topo-file": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/simple.clab.yml",
+        "containerlab": "simple"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine1": {
+      "index": "3",
+      "shortname": "spine1",
+      "longname": "clab-simple-spine1",
+      "fqdn": "spine1.simple.io",
+      "group": "",
+      "labdir": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/clab-simple/spine1",
+      "kind": "arista_ceos",
+      "image": "ghcr.io/afroash/ceos:4.31.3m",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:6c:09:74",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-02defec70648",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/clab-simple/spine1",
+        "clab-node-longname": "clab-simple-spine1",
+        "clab-node-name": "spine1",
+        "clab-node-type": "",
+        "clab-owner": "ashley",
+        "clab-topo-file": "/home/ashley/Upskill/networkGoStuff/coes-simple-lab/simple.clab.yml",
+        "containerlab": "simple"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "spine1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:28:09:38",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1a",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d9:78:f9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "spine1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:4a:6e:71",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1b",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:74:67:e7",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf1a",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:16:7a:95",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1b",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:4d:4f:c6",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf1a",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:e0:fb:2c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1b",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:6d:b9:c5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf1a",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:09:f2:1d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:24:06:4a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf1b",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:83:7f:8f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:67:70:1e",
+        "peer": "a"
+      }
+    }
+  ]
+}

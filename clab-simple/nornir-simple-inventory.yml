@@ -1,0 +1,21 @@
+---
+leaf1a:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.20.20.3
+leaf1b:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.20.20.4
+spine1:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.20.20.2
+client1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.5
