@@ -3,7 +3,7 @@ name: simple
 topology:
   kinds:
     linux:
-      image: apline-host:latest
+      image: ghcr.io/srl-labs/alpine 
   nodes:
     spine1:
       kind: arista_ceos
