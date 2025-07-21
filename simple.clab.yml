@@ -7,15 +7,15 @@ topology:
   nodes:
     spine1:
       kind: arista_ceos
-      image: ghcr.io/afroash/ceos:4.31.3m 
+      image: ghcr.io/afroash/ceos:4.31.3M 
 
     leaf1a:
       kind: arista_ceos    
-      image: ghcr.io/afroash/ceos:4.31.3m 
+      image: ghcr.io/afroash/ceos:4.31.3M 
 
     leaf1b:
       kind: arista_ceos
-      image: ghcr.io/afroash/ceos:4.31.3m 
+      image: ghcr.io/afroash/ceos:4.31.3M 
 
     client1:
       kind: linux
