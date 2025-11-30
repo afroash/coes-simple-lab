@@ -3,19 +3,20 @@ name: simple
 topology:
   kinds:
     linux:
-      image: ghcr.io/srl-labs/alpine 
+      image: alpine:latest
+
   nodes:
     spine1:
       kind: arista_ceos
-      image: ghcr.io/afroash/ceos:4.31.3m 
+      image: ceos:4.31.3m 
 
     leaf1a:
       kind: arista_ceos    
-      image: ghcr.io/afroash/ceos:4.31.3m 
+      image: ceos:4.31.3m 
 
     leaf1b:
       kind: arista_ceos
-      image: ghcr.io/afroash/ceos:4.31.3m 
+      image: ceos:4.31.3m 
 
     client1:
       kind: linux

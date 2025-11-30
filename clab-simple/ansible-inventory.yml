@@ -12,12 +12,12 @@ all:
         ansible_password: admin
       hosts:
         clab-simple-leaf1a:
-          ansible_host: 172.20.20.3
+          ansible_host: 172.20.20.2
         clab-simple-leaf1b:
           ansible_host: 172.20.20.4
         clab-simple-spine1:
-          ansible_host: 172.20.20.2
+          ansible_host: 172.20.20.5
     linux:
       hosts:
         clab-simple-client1:
-          ansible_host: 172.20.20.5
+          ansible_host: 172.20.20.3
